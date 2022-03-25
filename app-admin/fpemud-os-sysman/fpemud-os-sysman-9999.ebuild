@@ -8,7 +8,7 @@ inherit git-r3
 
 DESCRIPTION="System manager for Fpemud OS"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/fpemud-os/sysman"
+EGIT_REPO_URI="https://gitee.com/fpemud-os/sysman"
 
 KEYWORDS="x86 amd64"
 LICENSE="GPL-3"
