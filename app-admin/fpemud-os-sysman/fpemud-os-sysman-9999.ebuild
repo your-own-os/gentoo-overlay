@@ -38,6 +38,7 @@ RDEPEND="sys-apps/systemd
          dev-python/blessed
          dev-python/gstage4
          dev-python/lxml
+         dev-python/mrget
          dev-python/ntplib
          dev-python/passlib
          dev-python/pygobject
