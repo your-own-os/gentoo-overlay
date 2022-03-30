@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{3_8,3_9,3_10} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="BIOS"
-HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/bbki.git"
+DESCRIPTION="BIOS, Bootloader, Kernel and Initramfs"
+HOMEPAGE="https://github.com/fpemud-os/bbki"
+EGIT_REPO_URI="https://gitee.com/your-own-os/bbki.git"
 
 LICENSE="GPLv3"
 SLOT="0"
