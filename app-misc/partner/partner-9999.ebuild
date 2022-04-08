@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{3_9,3_10} )
 
 inherit distutils-r1 git-r3
 
-EGIT_REPO_URI="https://gitee.com/fpemud-os/partner"
+EGIT_REPO_URI="https://gitee.com/your-own-os/partner"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 

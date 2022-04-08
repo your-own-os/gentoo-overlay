@@ -6,7 +6,7 @@ EAPI=7
 
 inherit git-r3
 
-EGIT_REPO_URI="https://gitee.com/fpemud-os/partner-plugin-mirrors"
+EGIT_REPO_URI="https://gitee.com/your-own-os/partner-plugin-mirrors"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
