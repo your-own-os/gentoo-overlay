@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="A python module for building stage4 of Gentoo Linux."
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/gstage4.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/gstage4.git"
 
 LICENSE="GPLv3"
 SLOT="0"
