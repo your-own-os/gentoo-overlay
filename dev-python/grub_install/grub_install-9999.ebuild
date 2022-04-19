@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Pure python implementation of grub2 installing process."
 HOMEPAGE="https://github.com/fpemud-os/grub_install"
-EGIT_REPO_URI="https://github.com/fpemud-os/grub_install.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/grub_install.git"
 
 LICENSE="GPLv3"
 SLOT="0"
