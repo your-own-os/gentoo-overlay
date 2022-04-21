@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Fetch location and size of physical screens"
 HOMEPAGE="https://github.com/rr-/screeninfo"
-SRC_URI="https://github.com/rr-/screeninfo/archive/refs/tags/${PV}.tar.gz"
+SRC_URI="https://github.com/rr-/screeninfo/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
