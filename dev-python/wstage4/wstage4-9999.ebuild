@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="A python module for building customized disk image of Microsoft Windows."
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/wstage4.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/wstage4.git"
 
 LICENSE="GPLv3"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Python module and tools for downloading microsoft windows install files, and other microsoft products."
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/windown.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/windown.git"
 
 LICENSE="GPL-3"
 SLOT="0"

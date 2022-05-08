@@ -9,7 +9,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Package warehouse for Fpemud OS."
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/pkgwh.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/pkgwh.git"
 
 LICENSE="GPLv3"
 SLOT="0"
