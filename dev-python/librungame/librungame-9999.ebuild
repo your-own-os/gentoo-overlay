@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/screeninfo
-        dev-python/pyamdgpuinfo
-        sys-fs/fuse-overlayfs"
+        dev-python/screeninfo[${PYTHON_USEDEP}]
+        dev-python/pyamdgpuinfo[${PYTHON_USEDEP}]
+        dev-python/wineprefix[${PYTHON_USEDEP}]"
 RDEPEND=""
