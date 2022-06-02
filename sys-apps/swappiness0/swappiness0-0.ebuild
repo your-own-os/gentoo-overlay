@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="6"
+EAPI=7
 
+DESCRIPTION="Tune swappiness on boot"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
-
-DESCRIPTION="Tune swappiness when boot"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
