@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{3_9,3_10} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="It's a element warehouse"
+DESCRIPTION="It's an element warehouse"
 HOMEPAGE=""
 EGIT_REPO_URI="https://gitee.com/your-own-os/elemwh.git"
 
