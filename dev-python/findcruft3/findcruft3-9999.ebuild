@@ -7,14 +7,14 @@ PYTHON_COMPAT=( python{3_9,3_10} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module and tools for downloading microsoft windows install files, and other microsoft products."
-HOMEPAGE=""
-EGIT_REPO_URI="https://gitee.com/your-own-os/windown.git"
+DESCRIPTION="findcruft3 is a tool to find cruft files for GNU/Linux"
+HOMEPAGE="https://github.com/your-own-os/findcruft3"
+EGIT_REPO_URI="https://github.com/your-own-os/findcruft3.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="dev-python/selenium"
+RDEPEND=""
