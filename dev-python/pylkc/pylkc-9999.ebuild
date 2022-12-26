@@ -16,5 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+        sys-devel/gcc
+        sys-devel/binutils
+        virtual/rust
+        dev-util/bindgen"
 RDEPEND=""
