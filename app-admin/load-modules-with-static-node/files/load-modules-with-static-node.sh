@@ -3,5 +3,5 @@
 while IFS= read -r line; do
 	modname="${line%%[ ]*}"
 	modprobe "$modname"
-done < <(/bin/kmod static-nodes -f devname)
+done < <(kmod static-nodes -f devname)
 

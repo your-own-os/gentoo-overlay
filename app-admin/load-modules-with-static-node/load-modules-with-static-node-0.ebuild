@@ -24,3 +24,6 @@ src_install() {
 	systemd_dounit "${FILESDIR}/load-modules-with-static-node.service"
 	systemd_enable_service sysinit.target load-modules-with-static-node.service
 }
+
+# we should create app-admin/kmod-static-nodes which is seperated out from sys-apps/systemd, so that
+# app-admin/kmod-static-nodes and app-admin/load-modules-with-static-node can be two alternatives.

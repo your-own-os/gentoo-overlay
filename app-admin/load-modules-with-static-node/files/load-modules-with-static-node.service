@@ -9,5 +9,9 @@ ConditionFileNotEmpty=/lib/modules/%v/modules.devname
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/libexec/load-modules-with-static-node
+ExecStart=/usr/libexec/load-modules-with-static-node.sh
 TimeoutSec=90s
+
+[Install]
+WantedBy=sysinit.target
+
