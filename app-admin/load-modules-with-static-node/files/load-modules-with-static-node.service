@@ -1,0 +1,13 @@
+[Unit]
+Description=Load modules which has static device node
+DefaultDependencies=no
+Conflicts=shutdown.target
+Before=sysinit.target shutdown.target
+ConditionCapability=CAP_SYS_MODULE
+ConditionFileNotEmpty=/lib/modules/%v/modules.devname
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/libexec/load-modules-with-static-node
+TimeoutSec=90s
