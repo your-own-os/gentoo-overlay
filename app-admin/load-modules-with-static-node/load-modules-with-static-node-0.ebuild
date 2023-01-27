@@ -22,5 +22,5 @@ src_install() {
 	doexe "${FILESDIR}/load-modules-with-static-node.sh"
 
 	systemd_dounit "${FILESDIR}/load-modules-with-static-node.service"
-	systemd_enable_service sysinit load-modules-with-static-node
+	systemd_enable_service sysinit.target load-modules-with-static-node.service
 }
