@@ -19,3 +19,9 @@ IUSE=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/mrget[${PYTHON_USEDEP}]"
 RDEPEND=""
+
+src_install() {
+        distutils-r1_src_install
+
+        emake DESTDIR="${D}" install
+}
