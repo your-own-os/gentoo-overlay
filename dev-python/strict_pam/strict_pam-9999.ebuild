@@ -7,15 +7,14 @@ PYTHON_COMPAT=( python{3_9,3_10,3_11} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module used for operating passwd/group/shadow in a strict manner."
+DESCRIPTION="Python module used for manipulating PAM configuration in a strict manner."
 HOMEPAGE=""
-EGIT_REPO_URI="https://gitee.com/your-own-os/strict_pgs.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/strict_pam.git"
 
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/passlib[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
