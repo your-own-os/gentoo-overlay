@@ -15,12 +15,12 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}
+S=${WORKDIR}/FreeArc-${PV}-linux-i386
+
+src_compile() {
+	true
+}
 
 src_install() {
-	aaa
-	# dodir "/etc/portage"
-	# mkdir "${D}/etc/portage/bashrc.d"
-	# touch "${D}/etc/portage/bashrc.d/.keep"
-	# cp "${FILESDIR}/bashrc" "${D}/etc/portage"
+	dobin bin/unarc
 }
