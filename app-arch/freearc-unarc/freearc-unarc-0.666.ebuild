@@ -18,9 +18,9 @@ RDEPEND=""
 S=${WORKDIR}/FreeArc-${PV}-linux-i386
 
 src_compile() {
-	true
+	mv bin/unarc bin/freearc-unarc
 }
 
 src_install() {
-	dobin bin/unarc
+	dobin bin/freearc-unarc
 }
