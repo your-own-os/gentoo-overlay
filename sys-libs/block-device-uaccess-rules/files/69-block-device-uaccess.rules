@@ -1,0 +1,8 @@
+ACTION=="remove", GOTO="block_device_uaccess_end"
+ENV{MAJOR}=="", GOTO="block_device_uaccess_end"
+
+# we think all storage devices should be accessible by user if it belongs to a seat
+# system disks are still safe since they have no seat
+SUBSYSTEM=="block", TAG+="uaccess"
+
+LABEL="block_device_uaccess_end"
