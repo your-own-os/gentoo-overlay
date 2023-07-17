@@ -19,6 +19,7 @@ IUSE="bcachefs btrfs device-mapper"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
          dev-python/pyparted
+         dev-python/pyudev
          dev-python/psutil
          sys-fs/dosfstools
          bcachefs? ( sys-fs/bcachefs-tools )
