@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/pyparted
-        dev-python/reedsolomon
         sys-boot/grub"
 RDEPEND=""
+
+#        dev-python/reedsolomon
