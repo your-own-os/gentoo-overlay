@@ -20,7 +20,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-arch/cpio
          dev-python/psutil
          dev-python/pygit2
-         dev-python/pylkc
          dev-python/mrget
          dev-python/anytree
          dev-python/ordered-set
