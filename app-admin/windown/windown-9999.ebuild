@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="dev-python/selenium"
+RDEPEND="dev-python/selenium
+         net-misc/wget"
 DEPEND="${RDEPEND}"
 
