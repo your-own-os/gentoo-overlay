@@ -18,4 +18,5 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-emulation/qemu
+         app-emulation/libguestfs
          dev-python/pycdlib"
