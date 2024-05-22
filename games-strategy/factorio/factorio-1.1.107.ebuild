@@ -3,10 +3,11 @@
 # $Header: $
 
 EAPI=8
+inherit desktop
 
 DESCRIPTION="Factorio"
 HOMEPAGE=""
-SRC_URI="mirror://bittorent/Factorio_Linux/factorio_alpha_x64_1.1.107.tar.xz"
+SRC_URI="mirror://bittorent/Factorio_Linux/factorio_alpha_x64_${PV}.tar.xz"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -16,9 +17,11 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="virtual/wine[abi_x86_32]"
 
-src_prepare() {
-	return
-}
+S=${WORKDIR}
+
+#src_prepare() {
+#	return
+#}
 
 src_unpack() {
 	return
@@ -26,9 +29,11 @@ src_unpack() {
 
 src_install() {
 	mkdir "${D}/opt"
-	tar xJf "${DISTDIR}/${P}.zip" -d "${D}/opt"
+	tar -xJf "${DISTDIR}/factorio_alpha_x64_${PV}.tar.xz" -C "${D}/opt"
 
-	dosym /opt/factorio/bin/x64/factorio "${D}/usr/bin/factorio"
-	doicon "${D}/opt/factorio/core/graphics/factorio.png"
-	domenu "${FILESDIR}/${P}.desktop"
+	dosym ../../opt/factorio/bin/x64/factorio "/usr/bin/${PN}"
+	doicon "${D}/opt/factorio/data/core/graphics/factorio.png"
+
+	domenu "${FILESDIR}/${PN}.desktop"
+	# make_desktop_entry "${PN}" "${PN}" "${PN}" "Games;"	# complains Games is not a standard category?
 }
