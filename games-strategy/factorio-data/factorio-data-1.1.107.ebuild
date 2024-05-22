@@ -3,7 +3,6 @@
 # $Header: $
 
 EAPI=8
-inherit desktop
 
 DESCRIPTION="Factorio"
 HOMEPAGE=""
@@ -15,18 +14,15 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND=""
-RDEPEND="games-strategy/factorio-data
-         virtual/wine[abi_x86_32]"
+RDEPEND=""
 
 S=${WORKDIR}
 
 src_unpack() {
-	tar -xJf "${DISTDIR}/${A}" --strip-components=4 factorio/data/core/graphics/factorio.png
+	return
 }
 
 src_install() {
-	dobin "${FILESDIR}/${PN}"
-	doicon ${PN}.png
-	domenu "${FILESDIR}/${PN}.desktop"
-	# make_desktop_entry "${PN}" "${PN}" "${PN}" "Games;"	# complains Games is not a standard category?
+	dodir opt
+	tar -xJf "${DISTDIR}/factorio_alpha_x64_${PV}.tar.xz" -C "${D}/opt"
 }

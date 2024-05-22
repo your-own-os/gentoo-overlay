@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import librungame
+
+if __name__ == "__main__":
+    selfDir = os.path.dirname(os.path.realpath(__file__))
+    game = librungame.game.Factorio("/opt/factorio")
+    sysInfo = librungame.util.SysInfo()
+    runner = librungame.runner.DirectNonStandard("factorio", game, sysInfo)
+    runner.run()
