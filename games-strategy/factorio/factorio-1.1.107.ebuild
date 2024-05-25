@@ -6,7 +6,7 @@ EAPI=8
 inherit desktop
 
 DESCRIPTION="Factorio"
-HOMEPAGE=""
+HOMEPAGE="https://www.factorio.com"
 SRC_URI="mirror://bittorent/Factorio_Linux/factorio_alpha_x64_${PV}.tar.xz"
 LICENSE="unknown"
 SLOT="0"
@@ -16,7 +16,7 @@ RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="games-strategy/factorio-data
-         virtual/wine[abi_x86_32]"
+         dev-python/librungame"
 
 S=${WORKDIR}
 
