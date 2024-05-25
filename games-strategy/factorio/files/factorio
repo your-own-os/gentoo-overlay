@@ -2,12 +2,12 @@
 
 import os
 import librungame.util
-import librungame.game
 import librungame.runner
+import librungame.game.linux
 
 if __name__ == "__main__":
     selfDir = os.path.dirname(os.path.realpath(__file__))
     sysInfo = librungame.util.SysInfo()
-    game = librungame.game.Factorio("/opt/factorio")
-    runner = librungame.runner.DirectNonStandard("factorio", game, sysInfo)
+    game = librungame.game.linux.Factorio("/opt/factorio")
+    runner = librungame.runner.Direct("factorio", game, sysInfo)
     runner.run()
