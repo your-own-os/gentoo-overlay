@@ -1,0 +1,3 @@
+#!/bin/sh
+
+scummvm --path=/opt/legend-of-kyrandia kyra:kyra

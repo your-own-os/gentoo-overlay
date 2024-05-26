@@ -5,7 +5,7 @@
 EAPI=8
 inherit desktop
 
-DESCRIPTION="Legend of Kyrandia 2 - The Hand of Fate"
+DESCRIPTION="Legend of Kyrandia 3 - The Hand of Fate"
 HOMEPAGE=""
 SRC_URI=""
 LICENSE="unknown"
@@ -15,7 +15,7 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND=""
-RDEPEND="games-puzzle/legend-of-kyrandia2-data
+RDEPEND="games-puzzle/legend-of-kyrandia3-data
          games-engines/scummvm"
 
 S=${WORKDIR}

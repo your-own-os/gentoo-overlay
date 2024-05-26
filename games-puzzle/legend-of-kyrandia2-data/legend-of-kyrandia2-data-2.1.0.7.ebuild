@@ -8,7 +8,7 @@ inherit estack
 # For GOG install
 MY_EXE="setup_legend_of_kyrandia2_2.1.0.7.exe"
 
-DESCRIPTION="Data files for Legend of Kyrandia 2 - Hand"
+DESCRIPTION="Data files for Legend of Kyrandia 2 - The Hand of Fate"
 HOMEPAGE=""
 SRC_URI="mirror://gog/${MY_EXE}"
 LICENSE="unknown"
