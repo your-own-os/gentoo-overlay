@@ -8,7 +8,7 @@ inherit estack
 # For GOG install
 MY_EXE="setup_legend_of_kyrandia3_2.1.0.6.exe"
 
-DESCRIPTION="Data files for Legend of Kyrandia 3"
+DESCRIPTION="Data files for Legend of Kyrandia 3 - Malcolm's Revenge"
 HOMEPAGE=""
 SRC_URI="mirror://gog/${MY_EXE}"
 LICENSE="unknown"

@@ -5,7 +5,7 @@
 EAPI=8
 inherit desktop
 
-DESCRIPTION="Legend of Kyrandia 3 - The Hand of Fate"
+DESCRIPTION="Legend of Kyrandia 3 - Malcolm's Revenge"
 HOMEPAGE=""
 SRC_URI=""
 LICENSE="unknown"
