@@ -18,5 +18,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-emulation/qemu
+         app-misc/hivex[python,${PYTHON_USEDEP}]
+         sys-fs/fuseloop
          sys-fs/libfat
+         sys-fs/ntfs3g[suid]
          dev-python/pycdlib"
