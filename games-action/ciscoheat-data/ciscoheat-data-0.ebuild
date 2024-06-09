@@ -20,7 +20,7 @@ S=${WORKDIR}
 
 src_install() {
 	insinto /opt/ciscoheat
-	doins -r CiscoHea/*
+	doins -r CiscoHea/{cisco.*,music.dat}
 }
 
 pkg_postinst() {
