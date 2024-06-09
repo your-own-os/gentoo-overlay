@@ -16,9 +16,11 @@ RESTRICT="mirror"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
+S=${WORKDIR}
+
 src_install() {
 	insinto /opt/ciscoheat
-	doins -r *
+	doins -r CiscoHea/*
 }
 
 pkg_postinst() {
