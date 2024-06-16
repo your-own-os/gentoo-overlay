@@ -24,7 +24,7 @@ RDEPEND="app-arch/cpio
          dev-python/anytree
          dev-python/ordered-set
          dev-python/grub_install
-         sys-apps/kmod[python]
+         sys-apps/kmod
          device-mapper? ( sys-fs/lvm2 )
          btrfs? ( sys-fs/btrfs-progs )"
 
