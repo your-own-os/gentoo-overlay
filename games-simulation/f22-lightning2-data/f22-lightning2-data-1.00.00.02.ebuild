@@ -24,8 +24,12 @@ DEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	[[ -d doc ]] && dodoc *.pdf
+	if use doc ; then
+		cp ${DISTDIR}/F-22-Lightning-II_RefCard_DOS_EN.pdf refcard.pdf
+		dodoc refcard.pdf
+	fi
 
+	rm f22/*.dosbox
 	insinto /opt/f22-lightning2
 	doins -r f22/*
 }
