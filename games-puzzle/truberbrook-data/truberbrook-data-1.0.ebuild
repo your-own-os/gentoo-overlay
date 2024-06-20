@@ -18,7 +18,8 @@ DEPEND="app-arch/p7zip"
 S="${WORKDIR}"
 
 src_unpack() {
-	7z x ${A} || die
+	7z x "${DISTDIR}/${A}" || die
+	rm usr/bin/run.sh
 }
 
 src_install() {
