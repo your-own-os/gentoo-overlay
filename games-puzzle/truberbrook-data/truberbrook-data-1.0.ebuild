@@ -19,10 +19,17 @@ S="${WORKDIR}"
 
 src_unpack() {
 	7z x "${DISTDIR}/${A}" || die
+
 	rm usr/bin/run.sh
+
+	find . -type f | xargs chmod 644
+	find . -type d | xargs chmod 755
+	chmod 755 usr/bin/Truberbrook
 }
 
 src_install() {
-	insinto /opt/truberbrook
-	doins -r usr/bin/*
+	# usr/bin/Truberbrook has mode 755 so that we can't use doins
+	dodir opt
+	cp -r usr/bin "${D}/opt/truberbrook"
+	cp -r Truberbrook.png "${D}/opt/truberbrook"
 }
