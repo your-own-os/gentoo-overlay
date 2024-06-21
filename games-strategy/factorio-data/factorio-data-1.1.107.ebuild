@@ -26,3 +26,8 @@ src_install() {
 	dodir opt
 	tar -xJf "${DISTDIR}/factorio_alpha_x64_${PV}.tar.xz" -C "${D}/opt"
 }
+
+pkg_postinst() {
+	elog "According to https://wiki.factorio.com/Install_guide, you must copy game files into your home directory and create desktop file yourself."
+	echo
+}
