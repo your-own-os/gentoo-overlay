@@ -32,4 +32,9 @@ src_install() {
 	dodir opt
 	cp -r usr/bin "${D}/opt/truberbrook"
 	cp -r Truberbrook.png "${D}/opt/truberbrook"
+
+	dobin "${FILESDIR}/${PN}"
+	dosym ../../../opt/${PN}/Truberbrook.png /usr/share/pixmaps/${PN}.png
+	domenu "${FILESDIR}/${PN}.desktop"
+	# make_desktop_entry "${PN}" "${PN}" "${PN}" "Games;"	# complains Games is not a standard category?
 }
