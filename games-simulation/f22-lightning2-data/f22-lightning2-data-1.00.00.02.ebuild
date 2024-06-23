@@ -26,7 +26,8 @@ S="${WORKDIR}"
 src_install() {
 	if use doc ; then
 		cp ${DISTDIR}/F-22-Lightning-II_RefCard_DOS_EN.pdf refcard.pdf
-		dodoc refcard.pdf
+		insinto /usr/share/doc/f22-lightning2
+		doins refcard.pdf
 	fi
 
 	rm f22/*.dosbox
