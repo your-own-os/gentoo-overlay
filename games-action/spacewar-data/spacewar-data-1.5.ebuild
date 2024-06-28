@@ -20,7 +20,7 @@ S=${WORKDIR}
 
 src_install() {
 	insinto /opt/spacewar
-	doins -r Spacewar/*
+	doins -r space-war/*
 }
 
 pkg_postinst() {
