@@ -19,6 +19,9 @@ RDEPEND=""
 S=${WORKDIR}
 
 src_install() {
+	# DOS only not accept filename in 8.3 format
+	mv space-war/Spacewar.1985.exe space-war/SPACEWAR.EXE
+
 	insinto /opt/spacewar
 	doins -r space-war/*
 }
