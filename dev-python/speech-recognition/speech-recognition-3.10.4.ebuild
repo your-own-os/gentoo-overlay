@@ -4,23 +4,33 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{9..12} )
-
 inherit distutils-r1
 
-DESCRIPTION="${PN}"
-HOMEPAGE="https://pypi.org/project/${PN}"
+DESCRIPTION="Google-powered speech recognition for Python"
+HOMEPAGE="https://github.com/Uberi/speech_recognition"
+
+if [[ ${PV} == *9999* ]];then
+	inherit git-r3
+	SRC_URI=""
+	EGIT_REPO_URI="${HOMEPAGE}"
+	KEYWORDS=""
+else
+	SRC_URI="${HOMEPAGE}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}"
+DEPEND="
+	${PYTHON_DEPS}
+	dev-python/pyaudio[${PYTHON_USEDEP}]
+	dev-python/google-api-python-client[${PYTHON_USEDEP}]
+	amd64? ( media-libs/flac )"
+RDEPEND="${DEPEND}"
 
-KEYWORDS="~amd64 ~x86"
-MY_PN=SpeechRecognition
+MY_PN=speech_recognition
 MY_P="${MY_PN}-${PV}"
-
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 S="${WORKDIR}/${MY_P}"
