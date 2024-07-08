@@ -16,9 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/pyparted
-        sys-boot/grub"
-RDEPEND=""
-
-#        dev-python/reedsolomon
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pyparted[${PYTHON_USEDEP}]
+         dev-python/reedsolo[${PYTHON_USEDEP}]
+         sys-boot/grub"
