@@ -18,12 +18,13 @@ IUSE="device-mapper btrfs bcachefs"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-arch/cpio
-         dev-python/psutil
-         dev-python/pygit2
-         dev-python/mrget
-         dev-python/anytree
-         dev-python/ordered-set
-         dev-python/grub_install
+         dev-python/anytree[${PYTHON_USEDEP}]
+         dev-python/mrget[${PYTHON_USEDEP}]
+         dev-python/psutil[${PYTHON_USEDEP}]
+         dev-python/pygit2[${PYTHON_USEDEP}]
+         dev-python/sortedcontainers[${PYTHON_USEDEP}]
+         dev-python/ordered-set[${PYTHON_USEDEP}]
+         dev-python/grub_install[${PYTHON_USEDEP}]
          sys-apps/kmod
          device-mapper? ( sys-fs/lvm2 )
          btrfs? ( sys-fs/btrfs-progs )"
