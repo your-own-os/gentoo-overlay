@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-emulation/qemu[python]
          app-misc/hivex[python]
+         dev-python/chardet[${PYTHON_USEDEP}]
          dev-python/pycdlib[${PYTHON_USEDEP}]
          dev-python/pyparted[${PYTHON_USEDEP}]
          dev-python/pytesseract[${PYTHON_USEDEP}]
