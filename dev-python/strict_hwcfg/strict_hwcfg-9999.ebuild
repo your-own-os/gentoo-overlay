@@ -17,4 +17,5 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
+         dev-python/pycups[${PYTHON_USEDEP}]"
