@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="app-emulation/qemu
+RDEPEND="app-emulation/qemu[python]
          app-misc/hivex[python]
          dev-python/pycdlib[${PYTHON_USEDEP}]
          dev-python/pyparted[${PYTHON_USEDEP}]
