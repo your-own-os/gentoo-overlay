@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="device-mapper btrfs bcachefs"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="app-arch/cpio
+RDEPEND="app-arch/cabextract
+         app-arch/cpio
          dev-python/anytree[${PYTHON_USEDEP}]
          dev-python/mrget[${PYTHON_USEDEP}]
          dev-python/psutil[${PYTHON_USEDEP}]
