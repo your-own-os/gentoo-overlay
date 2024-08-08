@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+        dev-python/asyncio-pool[${PYTHON_USEDEP}]
         dev-python/mrget[${PYTHON_USEDEP}]
         dev-python/PySquashfsImage[${PYTHON_USEDEP}]"
 RDEPEND=""
