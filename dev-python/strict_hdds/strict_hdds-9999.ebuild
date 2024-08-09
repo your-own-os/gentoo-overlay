@@ -14,7 +14,7 @@ EGIT_REPO_URI="https://gitee.com/your-own-os/strict_hdds.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="bcachefs btrfs device-mapper"
+IUSE="bcachefs btrfs ntfs device-mapper"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
@@ -24,6 +24,7 @@ RDEPEND="dev-python/crcmod
          sys-fs/dosfstools
          bcachefs? ( sys-fs/bcachefs-tools )
          btrfs? ( sys-fs/btrfs-progs )
+         ntfs? ( sys-fs/ntfs3g )
          device-mapper? ( sys-fs/lvm2 )"
 
 src_prepare() {
@@ -33,6 +34,9 @@ src_prepare() {
         fi
         if ! use btrfs ; then
                 rm -rf ${WORKDIR}/${P}/python3/strict_hdds/layout_*_btrfs*.py
+        fi
+        if ! use ntfs ; then
+                rm -rf ${WORKDIR}/${P}/python3/strict_hdds/layout_*_ntfs*.py
         fi
         if ! use device-mapper ; then
                 rm -rf ${WORKDIR}/${P}/python3/strict_hdds/layout_*_lvm_*.py
