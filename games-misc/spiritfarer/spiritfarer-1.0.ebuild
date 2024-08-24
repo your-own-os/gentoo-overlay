@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit unpacker xdg-utils
+
 DESCRIPTION="Spiritfarer is a cozy management game about dying."
 HOMEPAGE=""
 SRC_URI="mirror://gog/spiritfarer_35325c_linux_54594.sh"
@@ -18,21 +20,29 @@ DEPEND="app-arch/p7zip"
 S="${WORKDIR}"
 
 src_unpack() {
-	7z x "${DISTDIR}/${A}" || die
+	unpack_zip ${A}
 
-	rm usr/bin/game/goggame*
+	rm data/noarch/game/goggame*
 
 	find . -type f | xargs chmod 644
 	find . -type d | xargs chmod 755
-	chmod 755 usr/bin/game/Spiritfarer.exe
+	chmod 755 data/noarch/game/spiritFarer.x86_64
 }
 
 src_install() {
-	# usr/bin/game/Spiritfarer.exe has mode 755 so that we can't use doins
+	# data/noarch/game/spiritfarer.x86_64 has mode 755 so that we can't use doins
 	dodir opt
-	cp -r usr/bin/game "${D}/opt/${PN}"
+	cp -r data/noarch/game "${D}/opt/${PN}"
 
-	dosym ../../../opt/${PN}/SpiritFarer.exe /usr/bin/${PN}
+	dosym ../../../opt/${PN}/spiritFarer.x86_64 /usr/bin/${PN}
 	dosym ../../../opt/${PN}/SpiritFarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
 	domenu "${FILESDIR}/${PN}.desktop"
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
