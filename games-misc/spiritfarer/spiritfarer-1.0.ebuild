@@ -26,7 +26,7 @@ src_unpack() {
 
 	find . -type f | xargs chmod 644
 	find . -type d | xargs chmod 755
-	chmod 755 data/noarch/game/spiritFarer.x86_64
+	chmod 755 data/noarch/game/spiritfarer.x86_64
 }
 
 src_install() {
@@ -34,8 +34,8 @@ src_install() {
 	dodir opt
 	cp -r data/noarch/game "${D}/opt/${PN}"
 
-	dosym ../../../opt/${PN}/spiritFarer.x86_64 /usr/bin/${PN}
-	dosym ../../../opt/${PN}/SpiritFarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
+	dosym ../../opt/${PN}/spiritfarer.x86_64 /usr/bin/${PN}
+	dosym ../../opt/${PN}/SpiritFarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
 
