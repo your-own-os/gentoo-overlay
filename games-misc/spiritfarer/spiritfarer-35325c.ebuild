@@ -36,7 +36,7 @@ src_install() {
 
 	dosym ../../opt/${PN}/spiritfarer.x86_64 /usr/bin/${PN}
 	dosym ../../../opt/${PN}/spiritfarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
-	domenu "${FILESDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}-farewell.desktop"
 }
 
 pkg_postinst() {
