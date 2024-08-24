@@ -35,7 +35,7 @@ src_install() {
 	cp -r data/noarch/game "${D}/opt/${PN}"
 
 	dosym ../../opt/${PN}/spiritfarer.x86_64 /usr/bin/${PN}
-	dosym ../../opt/${PN}/SpiritFarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
+	dosym ../../../opt/${PN}/spiritfarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
 
