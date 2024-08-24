@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit desktop
+
 DESCRIPTION="A Sci-Fi-Mystery Adventure Game with handmade scenery."
 HOMEPAGE=""
 SRC_URI="mirror://linuxgame/Truberbrook/Truberbrook_amd64.appimage"

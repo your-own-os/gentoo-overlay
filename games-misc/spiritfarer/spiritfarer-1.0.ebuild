@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit unpacker xdg-utils
+inherit desktop unpacker xdg-utils
 
 DESCRIPTION="Spiritfarer is a cozy management game about dying."
 HOMEPAGE=""
