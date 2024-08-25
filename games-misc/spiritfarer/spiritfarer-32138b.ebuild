@@ -34,7 +34,7 @@ src_install() {
 	dodir opt
 	cp -r data/noarch/game "${D}/opt/${PN}"
 
-	dosym ../../opt/${PN}/Spiritfarer.exe /usr/bin/${PN}
+	dobin "${FILESDIR}/${PN}"
 	dosym ../../../opt/${PN}/Spiritfarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
