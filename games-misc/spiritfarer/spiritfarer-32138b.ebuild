@@ -26,16 +26,16 @@ src_unpack() {
 
 	find . -type f | xargs chmod 644
 	find . -type d | xargs chmod 755
-	chmod 755 data/noarch/game/spiritfarer.x86_64
+	chmod 755 data/noarch/game/Spiritfarer.exe
 }
 
 src_install() {
-	# data/noarch/game/spiritfarer.x86_64 has mode 755 so that we can't use doins
+	# data/noarch/game/Spiritfarer.exe has mode 755 so that we can't use doins
 	dodir opt
 	cp -r data/noarch/game "${D}/opt/${PN}"
 
-	dosym ../../opt/${PN}/spiritfarer.x86_64 /usr/bin/${PN}
-	dosym ../../../opt/${PN}/spiritfarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
+	dosym ../../opt/${PN}/Spiritfarer.exe /usr/bin/${PN}
+	dosym ../../../opt/${PN}/Spiritfarer_Data/Resources/UnityPlayer.png /usr/share/pixmaps/${PN}.png
 	domenu "${FILESDIR}/${PN}.desktop"
 }
 
