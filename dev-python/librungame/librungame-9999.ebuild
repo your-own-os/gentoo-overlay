@@ -19,5 +19,6 @@ IUSE=""
 DEPEND="dev-python/bidict[${PYTHON_USEDEP}]
         dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/screeninfo[${PYTHON_USEDEP}]
-        dev-python/wineprefix[${PYTHON_USEDEP}]"
+        dev-python/wineprefix[${PYTHON_USEDEP}]
+        sys-fs/fuse-overlayfs"
 RDEPEND=""
