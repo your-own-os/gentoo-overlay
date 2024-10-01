@@ -14,14 +14,10 @@ EGIT_REPO_URI="https://gitee.com/your-own-os/librungame.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="dosbox scummvm wine"
+IUSE=""
 
 RDEPEND="dev-python/bidict[${PYTHON_USEDEP}]
          dev-python/setuptools[${PYTHON_USEDEP}]
          dev-python/screeninfo[${PYTHON_USEDEP}]
-         dev-python/wineprefix[${PYTHON_USEDEP}]
-         sys-fs/fuse-overlayfs
-         dosbox? ( games-emulation/dosbox-staging )
-         scummvm? ( games-engines/scummvm )
-         wine? ( app-emulation/wine )"
+         dev-python/wineprefix[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
