@@ -21,7 +21,7 @@ RDEPEND="dev-python/bidict[${PYTHON_USEDEP}]
          dev-python/screeninfo[${PYTHON_USEDEP}]
          dev-python/wineprefix[${PYTHON_USEDEP}]
          sys-fs/fuse-overlayfs
-         dosbox? ( app-emulation/dosbox-staging )
+         dosbox? ( games-emulation/dosbox-staging )
          scummvm? ( games-engines/scummvm )
          wine? ( app-emulation/wine )"
 DEPEND="${RDEPEND}"
