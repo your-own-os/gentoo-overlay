@@ -26,4 +26,5 @@ RDEPEND="app-emulation/qemu[python]
          dev-python/pillow[${PYTHON_USEDEP}]
          sys-fs/fuseloop
          sys-fs/libfat
+         sys-fs/fatresize
          sys-fs/ntfs3g[suid]"
