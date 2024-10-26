@@ -24,7 +24,7 @@ CHECKREQS_DISK_BUILD=5G
 S="${WORKDIR}"
 
 src_unpack() {
-	7z x ${A}
+	7z x ${DISTDIR}/${A}
 }
 
 src_install() {
