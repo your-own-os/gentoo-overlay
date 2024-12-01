@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
-	sys-fs/fuse:0"
+	sys-fs/fuse:0
+        !sys-fs/libfat"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-S=${WORKDIR}/fuse-umfuse-fat-0.1
