@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=8
-inherit check-reqs desktop
+inherit check-reqs
 
 MY_PN=${PN/-data/}
 
