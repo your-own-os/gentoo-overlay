@@ -3,18 +3,17 @@
 # $Header: $
 
 EAPI=8
-PYTHON_COMPAT=( python{3_9,3_10} )
 
-inherit distutils-r1 git-r3
+inherit git-r3
 
 DESCRIPTION="findcruft3 is a tool to find cruft files for GNU/Linux"
-HOMEPAGE="https://github.com/your-own-os/findcruft3"
-EGIT_REPO_URI="https://github.com/your-own-os/findcruft3.git"
+HOMEPAGE="https://gitee.com/your-own-os/findcruft3"
+EGIT_REPO_URI="https://gitee.com/your-own-os/findcruft3.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND=""
 RDEPEND=""
