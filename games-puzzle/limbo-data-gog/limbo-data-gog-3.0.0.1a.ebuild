@@ -23,14 +23,16 @@ pkg_nofetch() {
 
 src_install() {
 	innoextract --extract --lowercase \
-		--include=/limbo.exe \
-		--include=/limbo_boot.pkg \
-		--include=/limbo_runtime.pkg \
-		--include=/data \
-		--include=/titledata \
-                --include=/lang \
+		--include=/app \
 		"${DISTDIR}/${A}" || die
 
+	mv app/lang/settings_uk.txt settings.txt
+
 	insinto /opt/limbo
-	doins doom.wad
+	doins app/limbo.exe
+	doins app/limbo_boot.pkg
+	doins app/limbo_runtime.pkg
+	doins -r app/data
+	doins -r app/titledata
+	doins settings.txt
 }
