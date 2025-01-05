@@ -4,7 +4,7 @@
 
 EAPI=8
 
-DESCRIPTION="Data files for Total Annihilation: Commander Pack"
+DESCRIPTION="Program files for Total Annihilation: Commander Pack"
 HOMEPAGE="https://www.gog.com/zh/game/total_anihilation_commander_pack"
 SRC_URI="mirror://gog/setup_total_annihilation_commander_pack_${PV}.exe"
 LICENSE="GOG-EULA"

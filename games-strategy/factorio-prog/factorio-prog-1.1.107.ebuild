@@ -4,7 +4,7 @@
 
 EAPI=8
 
-DESCRIPTION="Factorio"
+DESCRIPTION="Program files for Factorio"
 HOMEPAGE=""
 SRC_URI="mirror://bittorent/Factorio_Linux/factorio_alpha_x64_${PV}.tar.xz"
 LICENSE="unknown"
