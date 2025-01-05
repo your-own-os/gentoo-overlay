@@ -4,7 +4,7 @@
 
 EAPI=8
 
-DESCRIPTION="Data files for Limbo from gog.com"
+DESCRIPTION="Program files for Limbo from gog.com"
 HOMEPAGE="https://www.gog.com/en/game/limbo"
 SRC_URI="mirror://gog/setup_limbo_3.0.0.1a_(12082).exe"
 LICENSE="GOG-EULA"
