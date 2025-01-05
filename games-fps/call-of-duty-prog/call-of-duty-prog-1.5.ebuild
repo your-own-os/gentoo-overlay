@@ -3,7 +3,6 @@
 # $Header: $
 
 EAPI=8
-inherit check-reqs
 
 MY_PN=${PN/-prog/}
 
