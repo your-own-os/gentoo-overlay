@@ -4,9 +4,9 @@
 
 EAPI=8
 
-DESCRIPTION="DOS game SPACEWAR"
+DESCRIPTION="Program files for CISCO HEAT"
 HOMEPAGE=""
-SRC_URI="mirror://myabandonware-game/spaceware-6o/Spacewar_DOS_EN.zip"
+SRC_URI="mirror://archive-org-download/msdos_Cisco_Heat_-_All_American_Police_Car_Race_1991/Cisco_Heat_-_All_American_Police_Car_Race_1991.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -19,11 +19,8 @@ RDEPEND=""
 S=${WORKDIR}
 
 src_install() {
-	# DOS only not accept filename in 8.3 format
-	mv space-war/Spacewar.1985.exe space-war/SPACEWAR.EXE
-
-	insinto /opt/spacewar
-	doins -r space-war/*
+	insinto /opt/ciscoheat
+	doins -r CiscoHea/{cisco.*,music.dat}
 }
 
 pkg_postinst() {

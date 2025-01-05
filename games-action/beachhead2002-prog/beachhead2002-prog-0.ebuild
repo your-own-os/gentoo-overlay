@@ -4,11 +4,11 @@
 
 EAPI=8
 
-MY_PN=${PN/-data/}
+MY_PN=${PN/-prog/}
 
-DESCRIPTION="Apache Air Assault"
+DESCRIPTION="Program files for Beach Head 2002"
 HOMEPAGE=""
-SRC_URI="mirror://librungame-repacks/ah-64-apache-air-assault/ah-64-apache-air-assault.7z"
+SRC_URI="mirror://librungame-repacks/${MY_PN}/${MY_PN}.7z"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
