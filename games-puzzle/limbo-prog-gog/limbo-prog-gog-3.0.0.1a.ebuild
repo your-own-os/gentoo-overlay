@@ -32,6 +32,7 @@ src_install() {
 	doins app/limbo.exe
 	doins app/limbo_boot.pkg
 	doins app/limbo_runtime.pkg
+	doins -r app/data
 	doins -r app/titledata
 	doins settings.txt
 }
