@@ -26,6 +26,6 @@ src_install() {
 		--include=/app \
 		"${DISTDIR}/${A}" || die
 
-	insinto /opt/total_annihilation
+	insinto /opt/total-annihilation
 	doins -r app/*
 }
