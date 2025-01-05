@@ -5,10 +5,7 @@ EAPI=8
 
 inherit estack
 
-# For GOG install
-MY_EXE="setup_legend_of_kyrandia_2.1.0.14.exe"
-
-DESCRIPTION="Data files for Legend of Kyrandia"
+DESCRIPTION="Program files for F22 lightning 2"
 HOMEPAGE=""
 SRC_URI="mirror://myabandonware-game/f22-lightning-ii-a50/F-22-Lightning-II_DOS_EN_RIP-Version.zip
          mirror://myabandonware-game/f22-lightning-ii-a50/F-22-Lightning-II_RefCard_DOS_EN.pdf"

@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=8
-inherit check-reqs
+inherit check-reqs desktop
 
-MY_PN=${PN/-data/}
+MY_PN=${PN/-prog/}
 
-DESCRIPTION="Need For Speed 9 - Most Wanted Black Edition"
-HOMEPAGE="http://www.ea.com/need-for-speed-most-wanted"
-SRC_URI="mirror://librungame-repacks/need-for-speed9/need-for-speed9.7z"
+DESCRIPTION="Program files for Digital Combat Simulator World"
+HOMEPAGE="https://www.digitalcombatsimulator.com"
+SRC_URI="mirror://librungame-repacks/dcs-world/dcs-world.7z"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -19,7 +19,7 @@ RESTRICT="mirror"
 DEPEND="app-arch/p7zip"
 RDEPEND=""
 
-CHECKREQS_DISK_BUILD=5G
+CHECKREQS_DISK_BUILD=200G
 
 S="${WORKDIR}"
 

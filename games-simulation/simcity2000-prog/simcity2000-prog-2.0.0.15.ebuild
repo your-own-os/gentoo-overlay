@@ -8,7 +8,7 @@ inherit estack
 # For GOG install
 MY_EXE="setup_sc2000_se_2.0.0.15.exe"
 
-DESCRIPTION="Data files for SimCity2000 Special Edition"
+DESCRIPTION="Program files for SimCity2000 Special Edition"
 HOMEPAGE=""
 SRC_URI="mirror://gog/${MY_EXE}"
 LICENSE="unknown"
