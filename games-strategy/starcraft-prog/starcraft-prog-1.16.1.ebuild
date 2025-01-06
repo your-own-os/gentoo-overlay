@@ -3,12 +3,11 @@
 # $Header: $
 
 EAPI=8
-inherit check-reqs
 
 MY_PN=${PN/-prog/}
 
-DESCRIPTION="Program files for Need For Speed 9 - Most Wanted Black Edition"
-HOMEPAGE="http://www.ea.com/need-for-speed-most-wanted"
+DESCRIPTION="Program files for StarCraft with BroodWar"
+HOMEPAGE=""
 SRC_URI="mirror://librungame-repacks/${MY_PN}/${MY_PN}.7z"
 LICENSE="unknown"
 SLOT="0"
@@ -18,8 +17,6 @@ RESTRICT="mirror"
 
 DEPEND="app-arch/p7zip"
 RDEPEND=""
-
-CHECKREQS_DISK_BUILD=5G
 
 S="${WORKDIR}"
 
