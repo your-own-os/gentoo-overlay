@@ -29,6 +29,8 @@ src_install() {
 	insinto /usr/share/quake1/id1
 	newins app/id1/PAK0.PAK pak0.pak
 	newins app/id1/PAK1.PAK pak1.pak
+	doins app/id1/autoexec.cfg
+	doins app/id1/config.cfg
 
 	dodoc app/Docs/*
 }
