@@ -3,61 +3,89 @@
 
 EAPI=8
 
-ROCM_VERSION=5.5
+#ROCM_VERSION=5.5
 
-inherit cmake llvm rocm
+#inherit cmake llvm rocm git-r3
+inherit cmake git-r3
 
-LLVM_MAX_SLOT=19
-
-EGIT_REPO_URI="https://github.com/ggerganov/llama.cpp.git"
-inherit git-r3
+#LLVM_MAX_SLOT=19
 
 DESCRIPTION="Port of Facebook's LLaMA model in C/C++"
 HOMEPAGE="https://github.com/ggerganov/llama.cpp"
+EGIT_REPO_URI="https://github.com/ggerganov/llama.cpp.git"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="blas cublas lto tests tools rocm"
+IUSE="lto blas cuda kompute mkl opencl openmp rocm vulkan examples tests tools"
 CPU_FLAGS_X86=( avx avx2 f16c )
 
-DEPEND="blas? ( sci-libs/openblas:= )
-	cublas? ( dev-util/nvidia-cuda-toolkit )
-	rocm? ( sci-libs/rocBLAS )"
+DEPEND="blas? (
+		mkl? ( sci-libs/mkl )
+		!mkl? ( sci-libs/openblas:= )
+	)
+	cuda? ( dev-util/nvidia-cuda-toolkit )
+	opencl? ( virtual/opencl )
+	rocm? ( dev-util/rocm-smi )"
 RDEPEND="${DEPEND}"
-BDEPEND="${DEPEND}"
+BDEPEND=""
 
-S="${WORKDIR}/${P}"
+#S="${WORKDIR}/${P}"
+
+src_prepare() {
+	default
+	eapply "${FILESDIR}"/system-mkl.patch
+	cmake_src_prepare
+}
 
 src_configure() {
+	local blas=OFF
+	local blas_vendor="Generic"
+	if use blas; then
+		blas=ON
+		if use cuda ; then
+			blas_vendor="NVHPC"
+		elif use mkl ; then
+			blas_vendor="Intel"
+		fi
+	fi
+
 	if use rocm ; then
-		CC=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang
-		CXX=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang++
+		#CC=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang
+		#CXX=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang++
 		export DEVICE_LIB_PATH=/usr/lib/amdgcn/bitcode
 		export HIP_DEVICE_LIB_PATH=/usr/lib/amdgcn/bitcode
 	fi
 	local mycmakeargs=(
-		-DLLAMA_BLAS="$(usex blas)"
-		-DLLAMA_CUBLAS="$(usex cublas)"
-		-DLLAMA_LTO="$(usex lto)"
+		-DGGML_LTO="$(usex lto)"
+		-DGGML_BLAS=${blas}
+		-DGGML_BLAS_VENDOR=${blas_vendor}
+		-DGGML_CUDA="$(usex cuda)"
+		-DGGML_HIP="$(usex rocm)"
+		-DGGML_KOMPUTE=$(usex kompute)
+		-DGGML_OPENCL=$(usex opencl)
+		-DGGML_OPENMP=$(usex openmp)
+		-DGGML_VULKAN=$(usex vulkan)
 		-DLLAMA_BUILD_TESTS="$(usex tests)"
-		-DLLAMA_HIPBLAS="$(usex rocm)"
-		-DAMDGPU_TARGETS="$(get_amdgpu_flags)"
+		-DLLAMA_BUILD_EXAMPLES="$(usex examples)"
 		-DLLAMA_BUILD_SERVER=OFF
-		-DCMAKE_SKIP_BUILD_RPATH=ON
-		-DBUILD_NUMBER="1"
+		-DCMAKE_BUILD_TYPE=Release
 	)
-	if use cublas ; then
+	#	-DAMDGPU_TARGETS="$(get_amdgpu_flags)"
+	#	-DCMAKE_SKIP_BUILD_RPATH=ON
+	#	-DBUILD_NUMBER="1"
+
+	if use cuda ; then
 		addpredict /dev/nvidiactl
 	fi
 	cmake_src_configure
 }
 
-src_install() {
-	doheader include/*.h
-
-	cd "${BUILD_DIR}" || die
-	dolib.so src/*.so
-	dolib.so ggml/src/*.so
-	dobin bin/*
-}
+#src_install() {
+#	doheader include/*.h
+#
+#	cd "${BUILD_DIR}" || die
+#	dolib.so src/*.so
+#	dolib.so ggml/src/*.so
+#	dobin bin/*
+#}
