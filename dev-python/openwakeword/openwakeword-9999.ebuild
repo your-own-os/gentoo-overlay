@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=8
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 git-r3
 
@@ -17,5 +17,5 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/onnx[${PYTHON_USEDEP}]"
+        sci-libs/onnx[${PYTHON_USEDEP}]"
 RDEPEND=""
