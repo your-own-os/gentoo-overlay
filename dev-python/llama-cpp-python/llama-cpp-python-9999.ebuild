@@ -3,14 +3,14 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
 DISTUTILS_USE_PEP517=scikit-build-core
+PYTHON_COMPAT=( python3_{11..13} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
-DESCRIPTION="Python bindings for llama.cpp"
+DESCRIPTION="Python bindings for the llama.cpp library"
 HOMEPAGE="https://github.com/abetlen/llama-cpp-python"
-SRC_URI="https://github.com/abetlen/llama-cpp-python/archive/refs/tags/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
+EGIT_REPO_URI="https://github.com/abetlen/llama-cpp-python.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -18,11 +18,11 @@ KEYWORDS="~amd64"
 
 IUSE="examples server"
 
-DEPEND="
+RDEPEND="
 	sci-misc/llama-cpp
-	dev-python/diskcache
-	dev-python/numpy
-	dev-python/typing-extensions
+	>=dev-python/typing-extensions-4.5.0[${PYTHON_USEDEP}]
+	>=dev-python/numpy-1.20.0[${PYTHON_USEDEP}]
+	>=dev-python/diskcache-5.6.1[${PYTHON_USEDEP}]
 	server? (
 		dev-python/uvicorn
 		dev-python/fastapi
@@ -32,11 +32,19 @@ DEPEND="
 		dev-python/starlette-context
 	)
 "
-RDEPEND="${DEPEND}"
+BDEPEND="
+	test? (
+		>=dev-python/httpx-0.24.1[${PYTHON_USEDEP}]
+		>=dev-python/scipy-1.10[${PYTHON_USEDEP}]
+	)
+"
+# >=dev-python/jinja2-2.11.3[${PYTHON_USEDEP}]
 
-S="${WORKDIR}/llama-cpp-python-${PV}"
+distutils_enable_tests pytest
 
 src_prepare() {
+	default
+
 	if ! use examples ; then
 		rm -R examples
 	fi
