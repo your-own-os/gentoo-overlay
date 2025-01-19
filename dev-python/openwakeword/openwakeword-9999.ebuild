@@ -17,5 +17,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        sci-libs/onnx[${PYTHON_USEDEP}]"
+        dev-python/tqdm[${PYTHON_USEDEP}]
+        sci-libs/onnxruntime"
 RDEPEND=""
