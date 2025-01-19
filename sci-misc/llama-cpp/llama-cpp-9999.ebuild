@@ -3,12 +3,7 @@
 
 EAPI=8
 
-#ROCM_VERSION=5.5
-
-#inherit cmake llvm rocm git-r3
 inherit cmake git-r3
-
-#LLVM_MAX_SLOT=19
 
 DESCRIPTION="Port of Facebook's LLaMA model in C/C++"
 HOMEPAGE="https://github.com/ggerganov/llama.cpp"
@@ -26,11 +21,10 @@ DEPEND="blas? (
 	)
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	opencl? ( virtual/opencl )
-	rocm? ( dev-util/rocm-smi )"
+	rocm? ( sci-libs/hipBLAS )"
+# dev-util/rocm-smi for rocm
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
-#S="${WORKDIR}/${P}"
 
 src_prepare() {
 	default
@@ -50,12 +44,6 @@ src_configure() {
 		fi
 	fi
 
-	if use rocm ; then
-		#CC=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang
-		#CXX=/usr/lib/llvm/${LLVM_MAX_SLOT}/bin/clang++
-		export DEVICE_LIB_PATH=/usr/lib/amdgcn/bitcode
-		export HIP_DEVICE_LIB_PATH=/usr/lib/amdgcn/bitcode
-	fi
 	local mycmakeargs=(
 		-DGGML_LTO="$(usex lto)"
 		-DGGML_BLAS=${blas}
@@ -80,12 +68,3 @@ src_configure() {
 	fi
 	cmake_src_configure
 }
-
-#src_install() {
-#	doheader include/*.h
-#
-#	cd "${BUILD_DIR}" || die
-#	dolib.so src/*.so
-#	dolib.so ggml/src/*.so
-#	dobin bin/*
-#}
