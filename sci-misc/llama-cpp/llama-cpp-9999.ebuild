@@ -59,9 +59,6 @@ src_configure() {
 		-DLLAMA_BUILD_SERVER=OFF
 		-DCMAKE_BUILD_TYPE=Release
 	)
-	#	-DAMDGPU_TARGETS="$(get_amdgpu_flags)"
-	#	-DCMAKE_SKIP_BUILD_RPATH=ON
-	#	-DBUILD_NUMBER="1"
 
 	if use cuda ; then
 		addpredict /dev/nvidiactl
