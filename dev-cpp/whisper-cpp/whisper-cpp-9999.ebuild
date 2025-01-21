@@ -36,6 +36,8 @@ src_configure() {
 		-DWHISPER_CUBLAS=$(usex cuda)
 		-DWHISPER_HIPBLAS=$(usex hip)
 		-DWHISPER_SDL2=$(usex sdl2)
+		-DCMAKE_INSTALL_INCLUDEDIR=include/whisper-cpp
+		-DCMAKE_INSTALL_LIBDIR=lib64/whisper-cpp
 	)
 	cmake_src_configure
 }

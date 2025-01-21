@@ -58,6 +58,8 @@ src_configure() {
 		-DLLAMA_BUILD_EXAMPLES="$(usex examples)"
 		-DLLAMA_BUILD_SERVER=OFF
 		-DCMAKE_BUILD_TYPE=Release
+		-DCMAKE_INSTALL_INCLUDEDIR=include/llama-cpp
+		-DCMAKE_INSTALL_LIBDIR=lib64/llama-cpp
 		-DCMAKE_SKIP_RPATH=ON
 	)
 
