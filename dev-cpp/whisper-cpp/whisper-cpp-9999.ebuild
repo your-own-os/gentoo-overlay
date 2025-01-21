@@ -36,26 +36,8 @@ src_configure() {
 		-DWHISPER_CUBLAS=$(usex cuda)
 		-DWHISPER_HIPBLAS=$(usex hip)
 		-DWHISPER_SDL2=$(usex sdl2)
-		-DCMAKE_INSTALL_INCLUDEDIR=include/whisper-cpp
-		-DCMAKE_INSTALL_LIBDIR=lib64/whisper-cpp
 	)
+	#-DCMAKE_INSTALL_INCLUDEDIR=include/whisper-cpp
+	#-DCMAKE_INSTALL_LIBDIR=lib64/whisper-cpp
 	cmake_src_configure
 }
-
-#src_install() {
-#	doheader ggml.h whisper.h
-#
-#	use examples && dodoc -r examples
-#
-#	cd "${BUILD_DIR}" || die
-#	dolib.so libwhisper.so
-#	newbin bin/main whisper-cpp
-#	cd bin || die
-#	for i in *; do
-#		newbin "$i" "whisper-cpp_$i"
-#	done
-#}
-#
-#pkg_postinst() {
-#	elog "The main binary has been installed as \"whisper-cpp\""
-#}
