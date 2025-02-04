@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE="examples server"
 
 RDEPEND="
-	dev-cpp/llama-cpp
+	sci-misc/llama-cpp
 	>=dev-python/typing-extensions-4.5.0[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.20.0[${PYTHON_USEDEP}]
 	>=dev-python/diskcache-5.6.1[${PYTHON_USEDEP}]
