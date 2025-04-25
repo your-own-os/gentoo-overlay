@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Pool of asyncio coroutines with familiar interface."
 HOMEPAGE=""
-SRC_URI="https://github.com/gistart/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/gistart/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

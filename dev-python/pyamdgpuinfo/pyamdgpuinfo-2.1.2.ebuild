@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="AMD GPU stats"
 HOMEPAGE="https://github.com/mark9064/pyamdgpuinfo"
-SRC_URI="https://github.com/mark9064/pyamdgpuinfo/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/mark9064/pyamdgpuinfo/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3.0"
 SLOT="0"

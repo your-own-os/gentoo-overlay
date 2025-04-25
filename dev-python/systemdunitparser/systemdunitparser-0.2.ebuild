@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Systemd Unit Parser"
 HOMEPAGE="https://github.com/sgallagher/systemdunitparser"
-SRC_URI="https://github.com/sgallagher/systemdunitparser/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/sgallagher/systemdunitparser/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPLv3"
 SLOT="0"

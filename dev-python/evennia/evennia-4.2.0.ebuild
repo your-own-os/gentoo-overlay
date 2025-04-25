@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python MUD/MUX/MUSH/MU* development system"
 HOMEPAGE="https://github.com/evennia/evennia"
-SRC_URI="https://github.com/evennia/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/evennia/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"

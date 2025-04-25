@@ -6,7 +6,7 @@ inherit multilib-minimal meson
 
 DESCRIPTION="Circular Intrusive Double Linked List Collection"
 HOMEPAGE="https://c-util.github.io/c-list"
-SRC_URI="https://github.com/c-util/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/c-util/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 
 LICENSE="LGPL-2.1+"

@@ -6,7 +6,7 @@ inherit multilib-minimal meson
 
 DESCRIPTION="Dynamic Buffer Implementation in Standard ISO-C11"
 HOMEPAGE="https://github.com/fpemud/c-dynbuf"
-SRC_URI="https://github.com/fpemud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/fpemud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

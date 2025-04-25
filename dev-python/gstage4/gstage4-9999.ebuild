@@ -16,10 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND="dev-python/PySquashfsImage[${PYTHON_USEDEP}]
         dev-python/asyncio-pool[${PYTHON_USEDEP}]
         dev-python/mrget[${PYTHON_USEDEP}]
-        dev-python/PySquashfsImage[${PYTHON_USEDEP}]"
+        dev-python/portage_cfg[${PYTHON_USEDEP}]
+        dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 src_install() {

@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="A pure-python library for creating and extracting cab files"
 HOMEPAGE="https://github.com/hughsie/python-cabarchive/"
-SRC_URI="https://github.com/hughsie/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/hughsie/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

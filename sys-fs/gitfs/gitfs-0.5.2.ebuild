@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="gitfs is a FUSE file system that fully integrates with git"
 HOMEPAGE="https://www.presslabs.com/gitfs/"
-SRC_URI="https://github.com/PressLabs/${PN}/archive/${PV}.tar.gz -> ${PF}.tar.gz"
+SRC_URI="mirror://github/PressLabs/${PN}/archive/${PV}.tar.gz -> ${PF}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

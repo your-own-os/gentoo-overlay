@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="UI abstraction library - Qt plugin"
 HOMEPAGE="https://github.com/libyui/libyui-qt"
-SRC_URI="https://github.com/libyui/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/libyui/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0/6"

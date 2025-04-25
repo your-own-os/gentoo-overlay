@@ -7,7 +7,7 @@ inherit flag-o-matic
 
 DESCRIPTION="Glide/DirectX implementation on D3D11/12 "
 HOMEPAGE="https://github.com/dege-diosg/dgVoodoo2"
-SRC_URI="https://github.com/dege-diosg/dgVoodoo2/releases/download/v${PV}/dgVoodoo2_84_1.zip -> ${P}.zip"
+SRC_URI="mirror://github/dege-diosg/dgVoodoo2/releases/download/v${PV}/dgVoodoo2_84_1.zip -> ${P}.zip"
 
 KEYWORDS="-* amd64 x86"
 LICENSE="Unknown"

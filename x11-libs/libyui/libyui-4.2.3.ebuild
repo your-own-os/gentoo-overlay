@@ -7,7 +7,7 @@ inherit cmake
 
 DESCRIPTION="UI abstraction library"
 HOMEPAGE="https://github.com/libyui/libyui"
-SRC_URI="https://github.com/libyui/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/libyui/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0/6"

@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A Python wrapper around Linux's renameat2 system call"
 HOMEPAGE=""
-SRC_URI="https://github.com/jordemort/${PN}/releases/download/v${PV}/renameat2-${PV}.tar.gz"
+SRC_URI="mirror://github/jordemort/${PN}/releases/download/v${PV}/renameat2-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

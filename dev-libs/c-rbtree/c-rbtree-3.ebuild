@@ -6,7 +6,7 @@ inherit multilib-minimal meson
 
 DESCRIPTION="Intrusive Red-Black Tree Collection"
 HOMEPAGE="https://c-util.github.io/c-rbtree"
-SRC_URI="https://github.com/c-util/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/c-util/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 
 LICENSE="Apache"

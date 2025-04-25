@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Pure Python PXE (DHCP-(Proxy)/TFTP/HTTP/NBD) Server"
 HOMEPAGE=""
-SRC_URI="https://github.com/pypxe/PyPXE/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/pypxe/PyPXE/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
