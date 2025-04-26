@@ -3,6 +3,8 @@
 # $Header: $
 
 EAPI=8
+
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{6..12} )
 
 inherit distutils-r1 git-r3
@@ -17,6 +19,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/PySquashfsImage[${PYTHON_USEDEP}]
+        dev-python/aiofiles[${PYTHON_USEDEP}]
+        dev-python/aioshutil[${PYTHON_USEDEP}]
         dev-python/asyncio-pool[${PYTHON_USEDEP}]
         dev-python/mrget[${PYTHON_USEDEP}]
         dev-python/portage_cfg[${PYTHON_USEDEP}]
