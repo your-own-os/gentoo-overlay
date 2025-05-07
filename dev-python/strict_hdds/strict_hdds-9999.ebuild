@@ -24,8 +24,7 @@ RDEPEND="dev-python/crcmod
          sys-fs/dosfstools
          bcachefs? ( sys-fs/bcachefs-tools )
          btrfs? ( sys-fs/btrfs-progs )
-         ntfs? ( sys-fs/ntfs3g )
-         device-mapper? ( sys-fs/lvm2 )"
+         ntfs? ( sys-fs/ntfs3g )"
 
 src_prepare() {
         eapply_user
@@ -37,8 +36,5 @@ src_prepare() {
         fi
         if ! use ntfs ; then
                 rm -rf ${WORKDIR}/${P}/python3/strict_hdds/layout_*_ntfs*.py
-        fi
-        if ! use device-mapper ; then
-                rm -rf ${WORKDIR}/${P}/python3/strict_hdds/layout_*_lvm_*.py
         fi
 }
