@@ -24,7 +24,9 @@ DEPEND="dev-python/PySquashfsImage[${PYTHON_USEDEP}]
         dev-python/asyncio-pool[${PYTHON_USEDEP}]
         dev-python/mrget[${PYTHON_USEDEP}]
         dev-python/portage_cfg[${PYTHON_USEDEP}]
-        dev-python/setuptools[${PYTHON_USEDEP}]"
+        dev-python/setuptools[${PYTHON_USEDEP}]
+        dev-python/tenacity[${PYTHON_USEDEP}]
+        net-misc/wget"
 RDEPEND=""
 
 src_install() {
