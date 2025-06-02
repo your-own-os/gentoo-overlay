@@ -8,9 +8,9 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module for strictly manipulation systemd config files."
+DESCRIPTION="Python module for strictly manipulation systemd."
 HOMEPAGE=""
-EGIT_REPO_URI="https://gitee.com/your-own-os/strict_systemd_cfg.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/strict_systemd.git"
 
 LICENSE="GPLv3"
 SLOT="0"
