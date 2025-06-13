@@ -22,7 +22,6 @@ RDEPEND="app-arch/cabextract
          app-arch/cpio
          app-arch/dpkg
          app-arch/rpm2targz
-         dev-python/anytree[${PYTHON_USEDEP}]
          dev-python/mrget[${PYTHON_USEDEP}]
          dev-python/psutil[${PYTHON_USEDEP}]
          dev-python/pygit2[${PYTHON_USEDEP}]
