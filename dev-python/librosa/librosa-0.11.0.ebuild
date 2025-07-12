@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/lazy-loader[${PYTHON_USEDEP}]
+DEPEND="dev-python/decorator[${PYTHON_USEDEP}]
+        dev-python/lazy-loader[${PYTHON_USEDEP}]
         dev-python/setuptools[${PYTHON_USEDEP}]
         media-libs/soxr"
 RDEPEND=""
