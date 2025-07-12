@@ -4,7 +4,7 @@
 
 EAPI=8
 PYTHON_COMPAT=( python3_{6..13} )
-DISTUTILS_USE_PEP517=setuptools
+DISTUTILS_USE_PEP517=poetry
 
 inherit distutils-r1
 
@@ -19,3 +19,5 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
+
+S="${WORKDIR}/CTranslate2-${PV}"
