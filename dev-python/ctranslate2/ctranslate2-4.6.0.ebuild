@@ -8,15 +8,14 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1
 
-DESCRIPTION="Python library for audio and music analysis"
+DESCRIPTION="Fast inference engine for Transformer models"
 HOMEPAGE=""
-SRC_URI="mirror://github/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/OpenNMT/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="ISC"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/lazy-loader[${PYTHON_USEDEP}]
-        dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
