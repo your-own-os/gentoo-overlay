@@ -19,5 +19,5 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/tqdm[${PYTHON_USEDEP}]
-        sci-libs/onnxruntime"
+        sci-ml/onnxruntime"
 RDEPEND=""
