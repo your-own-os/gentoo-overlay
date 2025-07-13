@@ -4,13 +4,13 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..13} )
-EGIT_REPO_URI="https://github.com/seemoo-lab/opendrop.git"
+DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
 DESCRIPTION="an Open Source AirDrop Implementation"
 HOMEPAGE="https://github.com/seemoo-lab/opendrop"
-SRC_URI=""
+EGIT_REPO_URI="mirror://github/seemoo-lab/opendrop.git"
 
 LICENSE="GPL-3"
 SLOT="0"
