@@ -10,7 +10,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="An open-source audio wake word (or phrase) detection framework with a focus on performance and simplicity."
 HOMEPAGE="https://github.com/dscripka/openWakeWord"
-EGIT_REPO_URI="https://github.com/dscripka/openWakeWord.git"
+EGIT_REPO_URI="mirror://github/dscripka/openWakeWord.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"

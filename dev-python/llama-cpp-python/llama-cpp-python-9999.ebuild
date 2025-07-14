@@ -10,7 +10,7 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Python bindings for the llama.cpp library"
 HOMEPAGE="https://github.com/abetlen/llama-cpp-python"
-EGIT_REPO_URI="https://github.com/abetlen/llama-cpp-python.git"
+EGIT_REPO_URI="mirror://github/abetlen/llama-cpp-python.git"
 
 LICENSE="MIT"
 SLOT="0"

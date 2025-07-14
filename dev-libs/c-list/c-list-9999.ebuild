@@ -6,7 +6,7 @@ inherit multilib-minimal meson git-r3
 
 DESCRIPTION="Circular Intrusive Double Linked List Collection"
 HOMEPAGE="https://c-util.github.io/c-list"
-EGIT_REPO_URI="https://github.com/c-util/c-list"
+EGIT_REPO_URI="mirror://github/c-util/c-list"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"

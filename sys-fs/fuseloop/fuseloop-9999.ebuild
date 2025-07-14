@@ -6,7 +6,7 @@ EAPI=8
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/jmattsson/fuseloop"
+EGIT_REPO_URI="mirror://github/jmattsson/fuseloop"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 DESCRIPTION="Loopback mount utility using FUSE"
