@@ -8,7 +8,7 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module for strictly manipulation portage config files."
+DESCRIPTION="Python module for strictly manipulation portage config and data files."
 HOMEPAGE=""
 EGIT_REPO_URI="https://gitee.com/your-own-os/strict_portage_cfg.git"
 
