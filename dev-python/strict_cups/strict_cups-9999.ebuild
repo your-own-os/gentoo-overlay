@@ -8,9 +8,9 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module for strictly manipulation CUPS config files."
+DESCRIPTION="Python module for manipulating CUPS configuration in a strict manner."
 HOMEPAGE=""
-EGIT_REPO_URI="https://gitee.com/your-own-os/strict_cups_cfg.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/strict_cups.git"
 
 LICENSE="GPLv3"
 SLOT="0"
