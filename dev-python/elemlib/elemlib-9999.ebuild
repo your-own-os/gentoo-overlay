@@ -17,6 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND="dev-python/bidict[${PYTHON_USEDEP}]
+        dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/sqlglot[${PYTHON_USEDEP}]"
 RDEPEND=""
