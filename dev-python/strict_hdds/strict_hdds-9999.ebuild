@@ -25,7 +25,7 @@ RDEPEND="dev-python/crcmod
          sys-fs/dosfstools
          bcachefs? ( sys-fs/bcachefs-tools )
          btrfs? ( sys-fs/btrfs-progs )
-         ntfs? ( sys-fs/ntfs3g[suid] )"              # don't know why, but ntfs3g won't mount without suid
+         ntfs? ( sys-fs/ntfs3g )"
 
 src_prepare() {
         eapply_user
