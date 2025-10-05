@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://gitee.com/your-own-os/strict_hwcfg.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="cups ddcci"
+IUSE="+cups +ddcci"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
