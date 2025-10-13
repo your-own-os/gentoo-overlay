@@ -3,14 +3,14 @@
 # $Header: $
 
 EAPI=8
-PYTHON_COMPAT=( python3_{6..13} )
+PYTHON_COMPAT=( python3_{6..14} )
 DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="A Python library for reading and writing Windows BCD (Boot Configuration Data) files"
-HOMEPAGE="https://gitee.com/your-own-os/pybcd"
-EGIT_REPO_URI="https://gitee.com/your-own-os/pybcd.git"
+DESCRIPTION="Reading and writing Microsoft Windows BCD (Boot Configuration Data) file in a strict manner."
+HOMEPAGE="https://gitee.com/your-own-os/strict_winbcd"
+EGIT_REPO_URI="https://gitee.com/your-own-os/strict_winbcd.git"
 
 LICENSE="GPLv3"
 SLOT="0"
