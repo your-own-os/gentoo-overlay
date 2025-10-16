@@ -19,4 +19,5 @@ IUSE="+cups"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
-         cups? ( dev-python/pycups[${PYTHON_USEDEP}] )"
+         cups? ( dev-python/pycups[${PYTHON_USEDEP}] )
+         x11-libs/libdrm"
