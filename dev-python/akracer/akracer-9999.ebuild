@@ -8,9 +8,9 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python wrapper for the OANDA REST API"
-HOMEPAGE="https://github.com/oanda/oandapy"
-EGIT_REPO_URI="mirror://github/oanda/oandapy.git"
+DESCRIPTION="AKRacer is a third-party extension library for py_mini_racer"
+HOMEPAGE="https://github.com/akfamily/akracer"
+EGIT_REPO_URI="mirror://github/akfamily/akracer.git"
 
 LICENSE="MIT"
 SLOT="0"

@@ -8,9 +8,9 @@ DISTUTILS_USE_PEP517=setuptools
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python wrapper for the OANDA REST API"
-HOMEPAGE="https://github.com/oanda/oandapy"
-EGIT_REPO_URI="mirror://github/oanda/oandapy.git"
+DESCRIPTION="AKTools is an elegant and simple HTTP API library for AKShare, built for AKSharers!"
+HOMEPAGE="https://github.com/akfamily/aktools"
+EGIT_REPO_URI="mirror://github/akfamily/aktools.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,3 +19,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
+
+src_prepare() {
+	default
+	rm -r tests
+}
