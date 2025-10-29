@@ -6,7 +6,7 @@ EAPI=8
 PYTHON_COMPAT=( python3_{6..13} )
 DISTUTILS_USE_PEP517=setuptools
 
-inherit distutils-r1 git-r3
+inherit linux-info distutils-r1 git-r3
 
 DESCRIPTION="Ensures only some optimized harddisk layouts are used."
 HOMEPAGE="https://gitee.com/your-own-os/strict_hdds"
@@ -26,6 +26,13 @@ RDEPEND="dev-python/crcmod
          bcachefs? ( sys-fs/bcachefs-tools )
          btrfs? ( sys-fs/btrfs-progs )
          ntfs? ( sys-fs/ntfs3g )"
+
+pkg_pretend() {
+        local CONFIG_CHECK="~BCACHE ~EXT4_FS ~VFAT_FS"
+        use btrfs && CONFIG_CHECK+=" ~BTRFS_FS"
+        use ntfs && CONFIG_CHECK+=" ~NTFS3_FS"
+        check_extra_config
+}
 
 src_prepare() {
         eapply_user
