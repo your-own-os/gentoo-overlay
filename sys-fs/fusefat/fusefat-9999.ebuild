@@ -7,7 +7,7 @@ inherit git-r3
 
 DESCRIPTION="FUSE for FAT12 / FAT16 / FAT32 file systems"
 HOMEPAGE="https://gitee.com/your-own-os/fusefat"
-EGIT_REPO_URI="mirror://github/your-own-os/fusefat"
+EGIT_REPO_URI="https://gitee.com/your-own-os/fusefat"
 
 LICENSE="GPL-2"
 SLOT="0"
