@@ -3,8 +3,10 @@
 # $Header: $
 
 EAPI=8
+PYTHON_COMPAT=( python3_{9..14} )
+DISTUTILS_USE_PEP517=setuptools
 
-inherit git-r3
+inherit distutils-r1 git-r3
 
 EGIT_REPO_URI="https://gitee.com/your-own-os/bnetd"
 SRC_URI=""
@@ -25,3 +27,16 @@ RDEPEND="dev-python/pygobject
          net-misc/wakeonlan
          >=sys-apps/iproute2-2.6.34"
 DEPEND=""
+
+# install program by make
+# install python module by distutils
+
+src_compile() {
+	emake || die "emake failed"
+	distutils-r1_src_compile
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	distutils-r1_src_install
+}
