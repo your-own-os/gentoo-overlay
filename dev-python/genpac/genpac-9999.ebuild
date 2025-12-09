@@ -14,3 +14,6 @@ EGIT_REPO_URI="mirror://github/JinnLynn/genpac"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv ~sparc ~x86"
+
+RDEPEND="dev-python/publicsuffixlist
+         dev-python/netaddr"
