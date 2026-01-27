@@ -24,19 +24,19 @@ else
 	SRC_URI="mirror://github/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tgz"
 fi
 
+#		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
 DEPEND="
 	game? (
-		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
+		dev-games/ogre[freeimage,opengl]
 		dev-games/mygui[ogre,plugins]
 		media-libs/libsdl2[haptic]
 		media-libs/libvorbis
 		media-libs/libogg
 		media-libs/openal
-		sci-physics/bullet[bullet3,extras]
+		sci-physics/bullet
 	)
 	dev-libs/boost
 	net-libs/enet:1.3
-	sys-libs/libstdc++-v3
 "
 RDEPEND="${DEPEND}
 	~games-sports/stuntrally-tracks-${PV}
@@ -55,9 +55,9 @@ src_configure() {
 		-DBUILD_SHARED_LIBS=OFF
 		-DSHARE_INSTALL="share/stuntrally"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 }

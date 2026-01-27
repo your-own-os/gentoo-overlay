@@ -21,9 +21,9 @@ src_configure() {
 	local mycmakeargs+=(
 		-DSHARE_INSTALL="/usr/share/stuntrally"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 }
