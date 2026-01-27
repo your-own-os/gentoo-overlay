@@ -27,7 +27,7 @@ fi
 #		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
 DEPEND="
 	game? (
-		dev-games/ogre[bullet,freeimage,opengl]
+		dev-games/ogre-next[bullet,freeimage,opengl]
 		dev-games/mygui[ogre,plugins]
 		media-libs/libsdl2[haptic]
 		media-libs/libvorbis

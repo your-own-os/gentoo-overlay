@@ -15,8 +15,7 @@ LICENSE="MIT public-domain"
 SLOT="$(ver_cut 1-2)"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="+cache debug doc double-precision egl examples fine-granularity +freeimage
-	+opengl profile tools"
+IUSE="+cache debug doc double-precision egl examples fine-granularity +freeimage +opengl profile tools"
 
 # USE flags that do not work, as their options aren't ported, yet.
 #      cg
