@@ -21,7 +21,8 @@ if [[ ${PV} = 9999* ]]; then
 	LIVE_PDEPEND="=${CATEGORY}/${PN}-tracks-${PV}"
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="mirror://github/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tgz"
+	SRC_URI="mirror://github/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tgz
+	         mirror://github/stuntrally/tracks/archive/${PV}.tar.gz -> stuntrally-trakcs-${PV}.tar.gz"
 fi
 
 #		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
@@ -37,6 +38,8 @@ DEPEND="
 	)
 	dev-libs/boost
 	net-libs/enet:1.3
+	dev-libs/tinyxml
+	dev-libs/tinyxml2
 "
 RDEPEND="${DEPEND}
 	~games-sports/stuntrally-tracks-${PV}
