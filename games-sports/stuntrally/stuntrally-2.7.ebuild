@@ -18,37 +18,41 @@ if [[ ${PV} = 9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 	EGIT_REPO_URI="mirror://github/stuntrally/stuntrally"
-	LIVE_PDEPEND="=${CATEGORY}/${PN}-tracks-${PV}"
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="mirror://github/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tgz
-	         mirror://github/stuntrally/tracks/archive/${PV}.tar.gz -> stuntrally-trakcs-${PV}.tar.gz"
+	         mirror://github/stuntrally/tracks/archive/${PV}.tar.gz -> stuntrally-tracks-${PV}.tar.gz"
 fi
 
 #		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
 DEPEND="
 	game? (
-		dev-games/ogre[freeimage,opengl]
+		dev-games/ogre[bullet,freeimage,opengl]
 		dev-games/mygui[ogre,plugins]
 		media-libs/libsdl2[haptic]
 		media-libs/libvorbis
 		media-libs/libogg
 		media-libs/openal
-		sci-physics/bullet
+		sci-physics/bullet[extras]
 	)
 	dev-libs/boost
 	net-libs/enet:1.3
 	dev-libs/tinyxml
 	dev-libs/tinyxml2
 "
-RDEPEND="${DEPEND}
-	~games-sports/stuntrally-tracks-${PV}
-"
-PDEPEND="${LIVE_PDEPEND}"
+RDEPEND="${DEPEND}"
 
 REQUIRED_USE="editor? ( game )"
 
 DOCS=(Readme.txt)
+
+src_unpack() {
+	default
+
+	rmdir "${P}/data/tracks"
+	ln -s "../../tracks-${PV}" "${P}/data/tracks"
+	sed -i 's/cmake_minimum_required(VERSION .*)/cmake_minimum_required(VERSION 3.16)/g' "${P}/data/tracks/CMakeLists.txt"
+}
 
 src_configure() {
 	local mycmakeargs=(
