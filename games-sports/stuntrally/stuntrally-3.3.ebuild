@@ -17,11 +17,11 @@ IUSE="dedicated +game editor"
 if [[ ${PV} = 9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
-	EGIT_REPO_URI="mirror://github/stuntrally/stuntrally"
+	EGIT_REPO_URI="mirror://github/stuntrally/stuntrally3"
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="mirror://github/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tgz
-	         mirror://github/stuntrally/tracks/archive/${PV}.tar.gz -> stuntrally-tracks-${PV}.tar.gz"
+	SRC_URI="mirror://github/${PN}/stuntrally3/archive/${PV}.tar.gz -> ${P}.tgz
+	         mirror://github/stuntrally/tracks3/archive/${PV}.tar.gz -> stuntrally-tracks-${PV}.tar.gz"
 fi
 
 #		dev-games/ogre[cg,boost,ois,freeimage,opengl,zip,-double-precision]
