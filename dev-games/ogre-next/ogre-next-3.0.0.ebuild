@@ -9,7 +9,7 @@ inherit cmake flag-o-matic
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="https://www.ogre3d.org/"
-SRC_URI="https://github.com/OGRECave/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://github/OGRECave/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT public-domain"
 SLOT="$(ver_cut 1-2)"
