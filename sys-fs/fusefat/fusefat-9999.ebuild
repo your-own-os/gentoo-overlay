@@ -1,5 +1,6 @@
-# Copyright 2025 Ineluctable Overlay Authors
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 EAPI=8
 
@@ -133,9 +134,7 @@ LICENSE+=" MIT Unicode-3.0 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="
-	sys-fs/fuse:3
-"
+RDEPEND="sys-fs/fuse:3"
 DEPEND="${RDEPEND}"
 
 QA_FLAGS_IGNORED="usr/bin/fusefat"
