@@ -15,6 +15,7 @@ CRATES="
 	anstyle@1.0.13
 	anyhow@1.0.102
 	autocfg@1.5.0
+	bimap@0.6.3
 	bitflags@1.3.2
 	bitflags@2.11.0
 	bumpalo@3.20.2
@@ -30,6 +31,7 @@ CRATES="
 	colorchoice@1.0.4
 	core-foundation-sys@0.8.7
 	deranged@0.5.8
+	easy_fuser@0.4.5
 	env_filter@1.0.0
 	env_logger@0.11.9
 	equivalent@1.0.2
