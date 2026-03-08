@@ -41,7 +41,7 @@ CRATES="
 	find-msvc-tools@0.1.9
 	foldhash@0.1.5
 	fuser@0.16.0
-	getrandom@0.4.1
+	getrandom@0.4.2
 	hashbrown@0.15.5
 	hashbrown@0.16.1
 	heck@0.5.0
@@ -51,11 +51,11 @@ CRATES="
 	indexmap@2.13.0
 	is_terminal_polyfill@1.70.2
 	itoa@1.0.17
-	jiff-static@0.2.21
-	jiff@0.2.21
-	js-sys@0.3.90
+	jiff-static@0.2.23
+	jiff@0.2.23
+	js-sys@0.3.91
 	leb128fmt@0.1.0
-	libc@0.2.182
+	libc@0.2.183
 	linux-raw-sys@0.12.1
 	log@0.4.29
 	memchr@2.8.0
@@ -70,8 +70,8 @@ CRATES="
 	powerfmt@0.2.0
 	prettyplease@0.2.37
 	proc-macro2@1.0.106
-	quote@1.0.44
-	r-efi@5.3.0
+	quote@1.0.45
+	r-efi@6.0.0
 	regex-automata@0.4.14
 	regex-syntax@0.8.10
 	regex@1.12.3
@@ -96,10 +96,10 @@ CRATES="
 	utf8parse@0.2.2
 	wasip2@1.0.2+wasi-0.2.9
 	wasip3@0.4.0+wasi-0.3.0-rc-2026-01-06
-	wasm-bindgen-macro-support@0.2.113
-	wasm-bindgen-macro@0.2.113
-	wasm-bindgen-shared@0.2.113
-	wasm-bindgen@0.2.113
+	wasm-bindgen-macro-support@0.2.114
+	wasm-bindgen-macro@0.2.114
+	wasm-bindgen-shared@0.2.114
+	wasm-bindgen@0.2.114
 	wasm-encoder@0.244.0
 	wasm-metadata@0.244.0
 	wasmparser@0.244.0
@@ -119,8 +119,8 @@ CRATES="
 	wit-bindgen@0.51.0
 	wit-component@0.244.0
 	wit-parser@0.244.0
-	zerocopy-derive@0.8.39
-	zerocopy@0.8.39
+	zerocopy-derive@0.8.40
+	zerocopy@0.8.40
 	zmij@1.0.21
 "
 
