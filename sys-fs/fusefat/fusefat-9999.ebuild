@@ -127,9 +127,9 @@ CRATES="
 inherit cargo git-r3
 
 DESCRIPTION="FUSE for FAT12 / FAT16 / FAT32 file systems"
-HOMEPAGE="https://gitee.com/your-own-os/fusefat_2"
+HOMEPAGE="https://gitee.com/your-own-os/fusefat"
 SRC_URI="$(cargo_crate_uris ${CRATES})"
-EGIT_REPO_URI="https://gitee.com/your-own-os/fusefat_2.git"
+EGIT_REPO_URI="https://gitee.com/your-own-os/fusefat.git"
 
 LICENSE="GPL-3"
 # Dependent crate licenses
