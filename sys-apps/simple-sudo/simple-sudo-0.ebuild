@@ -16,6 +16,8 @@ DEPEND=""
 RDEPEND="sys-apps/util-linux[su]"
 BDEPEND=""
 
+S=${WORKDIR}
+
 src_install() {
     insinto /usr/bin
     doins "${FILESDIR}/sudo"
