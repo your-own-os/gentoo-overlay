@@ -1,0 +1,9 @@
+#!/bin/sh
+# simple-sudo - su -c wrapper to behave like sudo
+
+if [ $# -eq 0 ]; then
+    echo "Usage: simple-sudo <command> [args...]" >&2
+    exit 1
+fi
+
+exec su -c "exec $(printf '%q ' "$@")"
