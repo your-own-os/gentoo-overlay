@@ -20,5 +20,5 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-	newbin gitee gitee-cli
+	dobin gitee
 }
