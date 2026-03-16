@@ -12,10 +12,10 @@ CRATES="
 	anstyle-query@1.0.3
 	anstyle-wincon@3.0.3
 	anstyle@1.0.2
-	assert_cmd@2.0.17
+	assert_cmd@2.1.2
 	autocfg@1.1.0
-	bincode@2.0.1
-	bincode_derive@2.0.1
+	bincode-next@2.1.0
+	bincode_derive-next@2.1.0
 	bitflags@1.3.2
 	bitflags@2.4.0
 	bstr@1.8.0
@@ -31,7 +31,6 @@ CRATES="
 	crc-catalog@1.1.1
 	crc@2.1.0
 	difflib@0.4.0
-	doc-comment@0.3.3
 	either@1.9.0
 	enum-as-inner@0.6.0
 	enum_dispatch@0.3.12
@@ -114,11 +113,11 @@ CRATES="
 	tracing-subscriber@0.3.20
 	tracing@0.1.41
 	unicode-ident@1.0.11
-	unty@0.0.4
+	unty-next@0.1.1
 	utf8parse@0.2.1
 	uuid@1.9.1
 	valuable@0.1.0
-	virtue@0.0.18
+	virtue-next@0.1.2
 	wait-timeout@0.2.0
 	walkdir@2.4.0
 	wasi@0.11.0+wasi-snapshot-preview1
@@ -154,12 +153,12 @@ inherit cargo
 
 DESCRIPTION="Read-only FUSE server implementing XFS"
 HOMEPAGE="https://github.com/KhaledEmaraDev/xfuse"
-SRC_URI="https://crates.io/api/v1/crates/xfs-fuse/0.5.1/download -> xfs-fuse-0.5.1.crate
+SRC_URI="https://crates.io/api/v1/crates/xfs-fuse/${PV}/download -> xfs-fuse-${PV}.crate
 	$(cargo_crate_uris ${CRATES})"
 
 LICENSE="BSD-2-Clause"
 # Dependent crate licenses
-LICENSE+=" MIT Unicode-3.0"
+LICENSE+=" MIT Unicode-DFS-2016"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
