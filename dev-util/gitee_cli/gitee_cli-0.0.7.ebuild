@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Gitee CLI is a tool which interact with gitee server seamlessly via terminal"
 HOMEPAGE="https://github.com/JJ-H/gitee_cli"
-SRC_URI="https://github.com/JJ-H/gitee_cli/releases/download/v${PV}/gitee-v${PV}-linux-amd64.tar.gz"
+SRC_URI="mirror://github/JJ-H/gitee_cli/releases/download/v${PV}/gitee-v${PV}-linux-amd64.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
