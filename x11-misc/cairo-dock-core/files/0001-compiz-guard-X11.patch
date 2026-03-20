@@ -1,0 +1,19 @@
+--- cairo-dock-core-3.6.2.orig/src/implementations/cairo-dock-compiz-integration.c	2026-03-20 21:37:52.384090863 +0800
++++ cairo-dock-core-3.6.2.fresh/src/implementations/cairo-dock-compiz-integration.c	2026-03-20 21:38:12.484322562 +0800
+@@ -333,12 +333,16 @@
+ 
+ static void _add_workspace (void)
+ {
++#ifdef HAVE_X11
+ 	cairo_dock_change_nb_viewports (1, _compiz_set_nb_viewports);
++#endif
+ }
+ 
+ static void _remove_workspace (void)
+ {
++#ifdef HAVE_X11
+ 	cairo_dock_change_nb_viewports (-1, _compiz_set_nb_viewports);
++#endif
+ }
+ 
+ 

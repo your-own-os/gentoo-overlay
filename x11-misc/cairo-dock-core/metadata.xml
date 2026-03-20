@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metad SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<metad>
+  <maintainer type="person">
+    <email>fpemud@fpemud.net</email>
+    <name>F pemud</name>
+  </maintainer>
+  <longdescription lang="en">
+    Cairo-Dock is a light dock/panel for Linux desktop, providing an 
+    animated dock and a set of mini-applets. This package contains the
+    core library (gldi), the main daemon, and the Help applet.
+  </longdescription>
+  <use>
+    <flag name="X">Enable X11 support with GLX rendering</flag>
+    <flag name="curl">Enable curl support for network features</flag>
+    <flag name="desktop-manager">Enable GNOME session integration</flag>
+    <flag name="egl">Enable EGL support for rendering</flag>
+    <flag name="glu">Enable GLU library support</flag>
+    <flag name="gtk-layer-shell">Enable gtk-layer-shell support for Wayland</flag>
+    <flag name="systemd">Enable systemd user session integration</flag>
+    <flag name="wayland">Enable Wayland support</flag>
+  </use>
+</metad>

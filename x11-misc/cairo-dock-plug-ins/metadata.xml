@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metad SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<metad>
+  <maintainer type="person">
+    <email>fpemud@fpemud.net</email>
+    <name>F pemud</name>
+  </maintainer>
+  <longdescription lang="en">
+    Cairo-Dock is a light dock/panel for Linux desktop, providing an
+    animated dock and a set of mini-applets. This package contains
+    all the plugins and applets.
+  </longdescription>
+  <use>
+    <flag name="alsa">Enable AlsaMixer applet (alsa-lib)</flag>
+    <flag name="dbusmenu">Enable DBusMenu support for applets</flag>
+    <flag name="enable-disks">Build the Disks applet (unstable)</flag>
+    <flag name="enable-network-monitor">Build the Network-Monitor applet (unstable)</flag>
+    <flag name="enable-scooby-do">Build the Scooby-Do applet (unstable)</flag>
+    <flag name="enable-weblets">Build the Weblets applet (requires webkit2gtk)</flag>
+    <flag name="exif">Enable EXIF support in Slider applet (libexif)</flag>
+    <flag name="gmenu">Enable GMenu applet (gnome-menus)</flag>
+    <flag name="gnome-integration">Enable GNOME integration</flag>
+    <flag name="ical">Enable iCal support in Clock applet (libical)</flag>
+    <flag name="indicator">Enable Indicator support (ayatana-indicator3)</flag>
+    <flag name="kde-integration">Enable KDE integration</flag>
+    <flag name="mail">Enable Mail applet (libetpan)</flag>
+    <flag name="sensors">Enable sensors support in System-Monitor applet</flag>
+    <flag name="sound-effects">Enable Sound-Effects applet</flag>
+    <flag name="terminal">Enable Terminal applet (vte-2.91)</flag>
+    <flag name="upower">Enable UPower support in Logout/PowerManager applets</flag>
+    <flag name="weather">Enable Weather applet (json-c)</flag>
+    <flag name="xrandr">Enable XRandR support in ShowDesktop applet</flag>
+  </use>
+</metad>
