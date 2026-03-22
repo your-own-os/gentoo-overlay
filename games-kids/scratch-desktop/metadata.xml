@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fpemud@fpemud.com</email>
+		<name>fpemud</name>
+	</maintainer>
+	<longdescription lang="en">
+		Scratch 3.0 as a self-contained desktop application.
+		Scratch is a programming environment where you can create
+		your own interactive stories, games, and animations.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">scratchfoundation/scratch-desktop</remote-id>
+	</upstream>
+</pkgmetadata>
