@@ -5,9 +5,9 @@ EAPI=8
 
 inherit desktop xdg-utils
 
-DESCRIPTION="Scratch 3.0 as a standalone desktop application"
+DESCRIPTION="Scratch 3.0 as a self-contained desktop application"
 HOMEPAGE="https://scratch.mit.edu/ https://github.com/scratchfoundation/scratch-desktop"
-SRC_URI="mirror://github/scratchfoundation/scratch-desktop/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://2github.com/scratchfoundation/scratch-desktop/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -17,7 +17,6 @@ RESTRICT="network-sandbox mirror strip"
 
 RDEPEND="
 	dev-libs/nss
-	gnome-base/gconf
 	x11-libs/libXtst
 	x11-libs/libnotify
 	x11-libs/libXScrnSaver
@@ -27,6 +26,7 @@ RDEPEND="
 "
 BDEPEND="
 	net-libs/nodejs[npm]
+	dev-nodejs/webpack
 "
 
 S="${WORKDIR}/${P}"
@@ -37,38 +37,28 @@ src_prepare() {
 
 src_compile() {
 	export npm_config_cache="${WORKDIR}/npm_cache"
-	export ELECTRON_SKIP_BINARY_DOWNLOAD=1
 
-	npm install --no-audit --no-fund || die "npm install failed"
+	npm install --no-audit --no-fund --electron_mirror="https://npmmirror.com/mirrors/electron/" || die "npm install failed"
 
-	NODE_ENV=production npx webpack --config webpack.renderer.js || die "webpack renderer build failed"
-	NODE_ENV=production npx webpack --config webpack.main.js || die "webpack main build failed"
-
-	mkdir -p static/fetched || die
-	node ./scripts/fetchMediaLibraryAssets.js || die "fetch media assets failed"
-
-	npx electron-builder --linux AppImage --x64 || die "electron-builder failed"
+	NODE_ENV=production webpack --config webpack.renderer.js || die "webpack renderer build failed"
+	NODE_ENV=production webpack --config webpack.main.js || die "webpack main build failed"
 }
 
 src_install() {
-	local appimage
-	appimage=$(find dist -name "*.AppImage" -print -quit)
-	if [[ -z "${appimage}" ]]; then
-		die "AppImage not found in dist/"
-	fi
-
-	chmod +x "${appimage}" || die
-	cd "${WORKDIR}" || die
-	"${S}/${appimage}" --appimage-extract || die "Failed to extract AppImage"
+	local ELECTRON_DIR="node_modules/electron/dist"
 
 	insinto /opt/${PN}
-	doins -r squashfs-root/*
+	doins -r dist/
+	doins package.json
 
-	fperms 0755 /opt/${PN}/scratch-desktop
-	fperms 0755 /opt/${PN}/chrome-sandbox
-	fperms 0755 /opt/${PN}/chrome_crashpad_handler
+	cp -r "${ELECTRON_DIR}"/* "${D}/opt/${PN}/dist/" || die "Failed to copy electron"
 
-	dosym /opt/${PN}/scratch-desktop /usr/bin/scratch-desktop
+	find "${D}/opt/${PN}/dist/" -name "electron" -exec chmod 0755 {} \;
+	find "${D}/opt/${PN}/dist/" -name "scratch-desktop" -exec chmod 0755 {} \;
+	find "${D}/opt/${PN}/dist/" -name "chrome-sandbox" -exec chmod 4755 {} \;
+	find "${D}/opt/${PN}/dist/" -name "chrome_crashpad_handler" -exec chmod 0755 {} \;
+
+	dosym /opt/${PN}/dist/electron /usr/bin/scratch-desktop
 
 	doicon -s 256 "${FILESDIR}/scratch-desktop.png"
 	domenu "${FILESDIR}/scratch-desktop.desktop"
